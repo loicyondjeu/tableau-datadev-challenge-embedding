@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Embed with Filters </title>
 
+    <!-- load bootstrap to style up a little bit -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
         crossorigin="anonymous">
-
     <!-- load the tableau javascript api sitting on my tableau dev site -->
     <script type="text/javascript" src="https://10ax.online.tableau.com/javascripts/api/tableau-2.js"></script>
-    <!-- load the javascript embedding code -->
+    <!-- load the javascript embedding code script js-->
     <script type="text/javascript" src="./script.js"></script>
 </head>
 
 <body onload="initViz();">
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1"> Embedding Challenge Level 2: Embedded page with filter integration functionalities  </span>
+    <nav class="navbar navbar-light bg-primary">
+        <span class="navbar-brand mb-0 h1 text-white"> Embedding Challenge Level 2: Embedded page with filter integration functionalities  </span>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="container">
             <div style="display: flex; justify-content: space-between;">
-                <h2> Filters </h2>
+                <h2 class="text-primary"> Filters </h2>
                 <button type="button" class="btn btn-primary" onclick="clearFilters();"> clear filters </button>
             </div>
             <table class="table">
@@ -34,10 +34,11 @@
                   </tr>
                 </thead>
                 <tbody id="filterTableBody">
+                    <!-- this is where the filters are going to be rendered dynamically by script js -->
                 </tbody>
             </table>
         </div>
-        <h2> Dashboard </h2>
+        <h2 class="text-primary"> Dashboard </h2>
         <div id="vizContainer" style="height: 800px;"></div> 
     </div> 
 </body>
